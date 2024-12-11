@@ -94,6 +94,15 @@ plt.imsave("composed_image.png", composed_image)
 plt.imsave("inverse_image.png", inverse_image)
 plt.imsave("sheared_image.png", sheared_image)
 
+#It seems that the image's resolution size and dimension makes very weird results.
+#The composed image is just a rotation and shifting of the image, which makes it look off canvas.
+#The inverse image is a mirror of the image, but it also becomes translated. 
+#The reflected image seems to have just moved the image to the left, rotated it, and shifted it.
+#The scaled image indeed made the image smaller and shifted to the top left.
+#The sheared image stretches the resolution.
+#I believe the python software reads my image in a 90 degree flipped to the left angle.
+#So instead of reading it like a normal vertical image from my phone, it reads it in a rotated landscape image.
+#So it takes that image and does interesting shifts using the matrix calculations, which leaves weird resutls, which are technically correct.
 
 
 
